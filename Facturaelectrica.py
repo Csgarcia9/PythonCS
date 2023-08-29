@@ -13,4 +13,7 @@ def factura_luz(consumo):
         return factura 
         
 consumo = float(input("Digite el consumo electrico: "))  
-print("Su factura es de: ",factura_luz(consumo), "Pesos")
+if consumo < 1:
+    print("No posee consumo electrico")
+else:    
+    print("Su factura es de: ",factura_luz(consumo), "Pesos")
