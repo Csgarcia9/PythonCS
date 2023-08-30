@@ -1,16 +1,16 @@
 def factura_luz(consumo):
     
     if consumo <= 200:
-        factura = consumo * 5
-        return factura 
-    elif consumo <= 290:
-        factura = ((consumo - 200)* 8) + (200 * 5)
-        return factura 
-    elif consumo > 290:
-        restante1 = 90 * 8
-        restante2 = (consumo - 290) * 11
-        factura = restante1 + restante2 + (200 * 5)
-        return factura 
+        factura = (consumo * 8.62) + 128.96
+        return round(factura,2) 
+    elif consumo <= 300:
+        factura = ((consumo - 300)* 10.93) + (200 * 8.62) + 128.96
+        return round(factura,2) 
+    elif consumo > 300:
+        restante1 = 100 * 10.93
+        restante2 = (consumo - 300) * 13.26
+        factura = restante1 + restante2 + (200 * 8.62) + 128.96
+        return round(factura,2) 
         
 consumo = float(input("Digite el consumo electrico: "))  
 if consumo < 1:
