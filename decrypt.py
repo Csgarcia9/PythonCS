@@ -8,9 +8,6 @@ def lasso_letter( letter, shift_amount ):
     decoded_letter = chr(true_letter_code)
     return decoded_letter
 
-
-
-
 def lasso_word(word, shift_amount):
     decoded_word = ""
 # Este bucle for itera cada letra en el parámetro palabra
